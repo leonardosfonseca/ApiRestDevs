@@ -1,0 +1,28 @@
+version: "3.7"
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_USER: postgres
+      POSTGRES_DB: developers
+    volumes:
+      - ./api/db/data:/home/node/app
+ #api:
+ #  build: "./api"
+ #  container_name: 'api-server'
+ #  command: sh -c "npm run create tables && npm start"
+ #  ports:
+ #    - 3001:3001
+ #  volumes:
+ #    - .:/usr/app
+ #  links:
+ #    - db
+ #  depends_on:
+ #    - db
+    #environment:
+     # DB_HOST: db
+     # DB_USER: postgres
+      #DB_PASS: 123456
+      

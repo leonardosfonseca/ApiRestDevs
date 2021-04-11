@@ -1,0 +1,40 @@
+{
+  "name": "apirestleo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "jest",
+    "lint": "eslint src/** test/** --fix",
+    "secure-mode": "jest --watch --verbose=true",
+    "create tables": "knex migrate:latest --env test",
+    "knex_rollback": "knex migrate:rollback --env test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonardosfonseca/ApiRestDevs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leonardosfonseca/ApiRestDevs/issues"
+  },
+  "homepage": "https://github.com/leonardosfonseca/ApiRestDevs#readme",
+  "devDependencies": {
+    "eslint": "^7.24.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "jest": "^26.6.3",
+    "supertest": "^6.1.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "consign": "^0.1.6",
+    "express": "^4.17.1",
+    "knex": "^0.95.4",
+    "knex-logger": "^0.1.0",
+    "pg": "^8.5.1"
+  }
+}
