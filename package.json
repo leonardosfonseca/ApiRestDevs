@@ -7,8 +7,8 @@
     "start": "node src/server.js",
     "test": "jest",
     "lint": "eslint src/** test/** --fix",
-    "secure-mode": "jest --watch --verbose=true",
-    "create tables": "knex migrate:latest --env test",
+    "secure-mode": "jest --watchAll --verbose=true",
+    "create_tables": "knex migrate:latest --env test",
     "knex_rollback": "knex migrate:rollback --env test"
   },
   "repository": {
@@ -32,6 +32,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "consign": "^0.1.6",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "knex": "^0.95.4",
     "knex-logger": "^0.1.0",
